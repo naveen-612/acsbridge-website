@@ -1,0 +1,2301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACS Group - Aadhya Consultancy Services</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="ACS Group - Global education, career placement, and trade consultancy services with 15+ years of experience. Study abroad with iRaises, find careers with AsiaPride Global, trade solutions with TradeLink.">
+  <meta name="keywords" content="study abroad, career placement, trade consultancy, education services, global opportunities">
+  <meta name="author" content="ACS Group">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://acsbridge.com">
+  <meta property="og:title" content="ACS Group - Your Partner for Global Success">
+  <meta property="og:description" content="15+ years of excellence in Education, Placements, and Business consultancy worldwide.">
+  <meta property="og:image" content="https://acsbridge.com/assets/og-image.jpg">
+  
+  <!-- Country-specific hreflang -->
+  <link rel="alternate" hreflang="x-default" href="https://acsbridge.com">
+  <link rel="alternate" hreflang="en-ca" href="https://acsbridge.com/ca">
+  <link rel="alternate" hreflang="en-in" href="https://acsbridge.com/in">
+  <link rel="alternate" hreflang="en-gb" href="https://acsbridge.com/uk">
+  <link rel="alternate" hreflang="fr-fr" href="https://acsbridge.com/fr">
+  <link rel="alternate" hreflang="pl-pl" href="https://acsbridge.com/pl">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+  <style>
+    html {
+      font-size: 115.5%;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      /* New Color Palette - WCAG Compliant */
+      --primary: #0D47A1;
+      --primary-600: #0B3B8B;
+      --primary-light: #1976D2;
+      --accent: #FFC107;
+      --accent-dark: #F57F17;
+      --bg: #FFFFFF;
+      --surface: #F7F9FC;
+      --text: #111827;
+      --text-muted: #6B7280;
+      --error: #E53935;
+      --success: #2E7D32;
+      --warning: #F57C00;
+      --info: #1976D2;
+      
+      /* Gradients with new colors */
+      --primary-gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-600) 100%);
+      --secondary-gradient: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+      --accent-gradient: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      --success-gradient: linear-gradient(135deg, var(--success) 0%, #1B5E20 100%);
+      
+      /* Semantic colors */
+      --card-background: rgba(247, 249, 252, 0.8);
+      --border-color: rgba(17, 24, 39, 0.1);
+      --shadow-glow: 0 10px 40px rgba(13, 71, 161, 0.2);
+      
+      /* Typography */
+      --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-secondary: 'Outfit', system-ui, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      font-size: clamp(1.125rem, 1.25vw, 1.25rem);
+    }
+
+    h1 { font-size: 2.5rem; color: var(--text); }
+    h2 { font-size: 2rem; color: var(--text); }
+    h3 { font-size: 1.75rem; color: var(--text); }
+
+    /* Modern ACS Logo */
+    .acs-logo {
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      position: relative;
+      display: inline-block;
+      padding: 0 5px;
+    }
+    
+    .acs-logo::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--primary-gradient);
+      border-radius: 3px;
+    }
+
+    /* Navbar */
+    #navbar {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .nav-link {
+      position: relative;
+      padding: 0.5rem 0.5rem;
+      color: var(--text);
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0.5rem;
+      width: 0;
+      height: 2px;
+      background: var(--primary-gradient);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: calc(100% - 2rem);
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--primary);
+    }
+
+    /* Buttons */
+    .btn-gradient {
+      background: var(--primary-gradient);
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(13, 71, 161, 0.3);
+    }
+
+    .btn-gradient:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(13, 71, 161, 0.4);
+      color: white;
+    }
+
+    .btn-outline-gradient {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-gradient:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Animated Background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(13, 71, 161, 0.03) 0%, transparent 70%),
+        radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.03) 0%, transparent 80%);
+      z-index: -1;
+      animation: backgroundShift 20s ease-in-out infinite;
+    }
+
+    @keyframes backgroundShift {
+      0%, 100% { transform: translateX(0) translateY(0); }
+      33% { transform: translateX(-10px) translateY(-10px); }
+      66% { transform: translateX(10px) translateY(10px); }
+    }
+
+    /* Typography */
+    .gradient-text {
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Cards */
+    .glass {
+      background: var(--card-background);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .glass:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-glow);
+      border-color: var(--primary);
+    }
+
+    .business-card {
+      background: var(--card-background);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      height: 100%;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .business-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(13, 71, 161, 0.15);
+      border-color: var(--primary);
+    }
+
+    .business-card .icon {
+      font-size: 3.5rem;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Service Cards */
+    .service-card {
+      background: var(--card-background);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: all 0.4s ease;
+      height: 100%;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-glow);
+      border-color: var(--primary);
+    }
+
+    .service-card .icon {
+      font-size: 3rem;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Process Steps */
+    .process-step {
+      background: var(--card-background);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: all 0.4s ease;
+      height: 100%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .process-step:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .step-number {
+      font-family: var(--font-secondary);
+      font-size: 3rem;
+      font-weight: 900;
+      background: var(--secondary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Page Navigation */
+    .page-section {
+      display: none;
+      padding: 2rem 0;
+      min-height: 100vh;
+    }
+
+    .page-section.active {
+      display: block;
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Hero Section */
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--surface) 0%, var(--bg) 100%);
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-content .subtitle {
+      font-size: clamp(1.1rem, 4vw, 1.3rem);
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+    }
+
+    /* Statistics Counter */
+    .stat-counter {
+      font-size: 2.5rem;
+      font-weight: 900;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background: var(--card-background);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 3rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-control {
+      background: var(--bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      color: var(--text);
+      padding: 0.875rem 1.25rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 0.2rem rgba(13, 71, 161, 0.25);
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border-color);
+      padding: 4rem 0 2rem;
+      margin-top: 4rem;
+    }
+
+    .footer h5 {
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Country-specific styling */
+    .country-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-600) 100%);
+      color: white;
+      padding: 6rem 0 4rem;
+      text-align: center;
+    }
+
+    .country-flag {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    .country-info {
+      background: var(--card-background);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .currency-display {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* WhatsApp Float */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background: var(--success-gradient);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+      transition: all 0.3s ease;
+      z-index: 9999;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      color: white;
+      box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+    }
+
+    /* Loading Animation */
+    .loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      transition: opacity 0.5s ease;
+    }
+
+    .loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 3px solid rgba(13, 71, 161, 0.1);
+      border-top: 3px solid var(--primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Toast Notifications */
+    .toast-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 10001;
+    }
+
+    .toast {
+      background: var(--card-background);
+      border: 1px solid var(--border-color);
+      color: var(--text);
+      margin-bottom: 10px;
+      border-radius: 8px;
+      min-width: 300px;
+      animation: slideInRight 0.3s ease;
+    }
+
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* Social Share Buttons */
+    .social-share {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .social-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-3px);
+      color: white;
+    }
+
+    .social-linkedin {
+      background: linear-gradient(135deg, #0077b5, #005885);
+    }
+
+    .social-whatsapp {
+      background: linear-gradient(135deg, #25d366, #1ebe57);
+    }
+
+    .social-instagram {
+      background: linear-gradient(135deg, #e4405f, #833ab4);
+    }
+
+    .social-twitter {
+      background: linear-gradient(135deg, #1da1f2, #0d8bd6);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .business-card,
+      .service-card,
+      .process-step {
+        padding: 2rem 1rem;
+      }
+
+      .contact-form {
+        padding: 2rem;
+      }
+
+      .whatsapp-float {
+        bottom: 1rem;
+        right: 1rem;
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    /* Accessibility Improvements */
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus {
+      position: static !important;
+      width: auto !important;
+      height: auto !important;
+      padding: 0.25rem 0.5rem !important;
+      margin: 0 !important;
+      overflow: visible !important;
+      clip: auto !important;
+      white-space: normal !important;
+    }
+
+    /* Focus visible for better keyboard navigation */
+    .btn:focus-visible,
+    .nav-link:focus-visible,
+    .form-control:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+      :root {
+        --primary: #000080;
+        --text: #000000;
+        --bg: #FFFFFF;
+        --border-color: #000000;
+      }
+    }
+
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Ripple effect */
+    @keyframes ripple {
+      to {
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="sr-only sr-only-focusable btn btn-primary">Skip to main content</a>
+  
+  <!-- Loading Screen -->
+  <div class="loading" id="loading" role="status" aria-label="Loading">
+    <div class="spinner" aria-hidden="true"></div>
+    <span class="sr-only">Loading...</span>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" onclick="showPage('home')" aria-label="ACS Group Home">
+          <div class="acs-logo">ACS</div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" data-page="home" role="menuitem">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-page="iraises" role="menuitem">iRaises</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-page="asiapride" role="menuitem">AsiaPride Global</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-page="tradelink" role="menuitem">TradeLink</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-page="services" role="menuitem">Services</a>
+            </li>
+            <!-- Country Navigation -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Countries
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" data-page="india">🇮🇳 India</a></li>
+                <li><a class="dropdown-item" href="#" data-page="uk">🇬🇧 United Kingdom</a></li>
+                <li><a class="dropdown-item" href="#" data-page="france">🇫🇷 France</a></li>
+                <li><a class="dropdown-item" href="#" data-page="poland">🇵🇱 Poland</a></li>
+                <li><a class="dropdown-item" href="#" data-page="canada">🇨🇦 Canada</a></li>
+              </ul>
+            </li>
+            <!-- <li class="nav-item ms-lg-3">
+              <a class="btn btn-gradient" href="#" data-page="contact" role="menuitem">Get Started</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Home Page -->
+    <section id="home-page" class="page-section active" aria-label="Home page">
+      <div class="hero-section">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="hero-content">
+                <h1 class="gradient-text">Your Partner for Global Success</h1>
+                <p class="subtitle">ACS Group: Aadhya Consultancy Services. Over 15 years of excellence in Education, Placements, and Business.</p>
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                  <button class="btn btn-gradient btn-lg" onclick="showPage('iraises')" 
+                          aria-label="Learn about Study Abroad services">
+                    <i class="fas fa-graduation-cap me-2" aria-hidden="true"></i> Study Abroad
+                  </button>
+                  <button class="btn btn-outline-gradient btn-lg" onclick="showPage('asiapride')"
+                          aria-label="Explore career opportunities">
+                    <i class="fas fa-briefcase me-2" aria-hidden="true"></i> Find a Career
+                  </button>
+                </div>
+                
+                <!-- Statistics -->
+                <div class="row mt-5" role="region" aria-label="Company statistics">
+                  <div class="col-4 text-center">
+                    <div class="stat-counter" data-target="15" aria-label="15 years experience">0</div>
+                    <small class="text-muted">Years Experience</small>
+                  </div>
+                  <div class="col-4 text-center">
+                    <div class="stat-counter" data-target="500" aria-label="500 students placed">0</div>
+                    <small class="text-muted">Students Placed</small>
+                  </div>
+                  <div class="col-4 text-center">
+                    <div class="stat-counter" data-target="20" aria-label="20 countries served">0</div>
+                    <small class="text-muted">Countries</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="text-center">
+<img src="images/5e7cf5f2-fd33-41c8-8f4d-a8d36befd498-Photoroom.png" alt="" style="max-height: 600px; object-fit: cover;">
+                
+                <!-- <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Team collaboration representing ACS Group services" 
+                     class="img-fluid rounded-4" 
+                      -->
+                     
+                     
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Business Verticals -->
+      <div class="py-5">
+        <div class="container-fluid">
+          <h2 class="text-center mb-5 gradient-text">Our Business Verticals</h2>
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="business-card" onclick="showPage('iraises')" role="button" tabindex="0" 
+                   onkeypress="handleKeyPress(event, 'iraises')">
+                <div class="icon" aria-hidden="true"><i class="fas fa-globe-americas"></i></div>
+                <h3>iRaises</h3>
+                <p class="text-muted mb-3">Study abroad consultancy with end-to-end support for higher education.</p>
+                <div class="social-share">
+                  <a href="#" class="social-btn social-linkedin" onclick="shareService('iRaises', 'linkedin')"
+                     aria-label="Share iRaises on LinkedIn">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                  <a href="#" class="social-btn social-whatsapp" onclick="shareService('iRaises', 'whatsapp')"
+                     aria-label="Share iRaises on WhatsApp">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="business-card" onclick="showPage('asiapride')" role="button" tabindex="0"
+                   onkeypress="handleKeyPress(event, 'asiapride')">
+                <div class="icon" aria-hidden="true"><i class="fas fa-building"></i></div>
+                <h3>AsiaPride Global</h3>
+                <p class="text-muted mb-3">Placement services for professionals worldwide with a strong global network.</p>
+                <div class="social-share">
+                  <a href="#" class="social-btn social-linkedin" onclick="shareService('AsiaPride Global', 'linkedin')"
+                     aria-label="Share AsiaPride Global on LinkedIn">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                  <a href="#" class="social-btn social-whatsapp" onclick="shareService('AsiaPride Global', 'whatsapp')"
+                     aria-label="Share AsiaPride Global on WhatsApp">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="business-card" onclick="showPage('tradelink')" role="button" tabindex="0"
+                   onkeypress="handleKeyPress(event, 'tradelink')">
+                <div class="icon" aria-hidden="true"><i class="fas fa-exchange-alt"></i></div>
+                <h3>TradeLink</h3>
+                <p class="text-muted mb-3">Expert solutions for international trade, import, and export consultancy.</p>
+                <div class="social-share">
+                  <a href="#" class="social-btn social-linkedin" onclick="shareService('TradeLink', 'linkedin')"
+                     aria-label="Share TradeLink on LinkedIn">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                  <a href="#" class="social-btn social-whatsapp" onclick="shareService('TradeLink', 'whatsapp')"
+                     aria-label="Share TradeLink on WhatsApp">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Choose ACS -->
+      <div class="py-5">
+        <div class="container-fluid">
+          <h2 class="text-center mb-5 gradient-text">Why Choose ACS Group?</h2>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="glass p-4 text-center h-100">
+                <i class="fas fa-award fs-1 mb-3" style="color: var(--primary);" aria-hidden="true"></i>
+                <h5 class="gradient-text">15+ Years Experience</h5>
+                <p class="text-muted">Proven track record in global education and career services.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="glass p-4 text-center h-100">
+                <i class="fas fa-globe fs-1 mb-3" style="color: var(--primary-light);" aria-hidden="true"></i>
+                <h5 class="gradient-text">Global Network</h5>
+                <p class="text-muted">Partnerships with top universities and companies worldwide.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="glass p-4 text-center h-100">
+                <i class="fas fa-users fs-1 mb-3" style="color: var(--accent);" aria-hidden="true"></i>
+                <h5 class="gradient-text">Expert Team</h5>
+                <p class="text-muted">Certified counselors and industry professionals.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="glass p-4 text-center h-100">
+                <i class="fas fa-check-circle fs-1 mb-3" style="color: var(--success);" aria-hidden="true"></i>
+                <h5 class="gradient-text">Success Rate</h5>
+                <p class="text-muted">95% success rate in placements and admissions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- India Page -->
+    <section id="india-page" class="page-section" aria-label="India services page">
+      <div class="country-hero">
+        <div class="container-fluid text-center">
+          <div class="country-flag">🇮🇳</div>
+          <h1>ACS Group India</h1>
+          <p class="lead">Namaste! Your trusted partner for global education and career opportunities from India.</p>
+        </div>
+      </div>
+      
+      <div class="container-fluid py-5">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="country-info">
+              <h3 class="gradient-text">🎓 Study Abroad from India</h3>
+              <p>Join thousands of Indian students who have successfully pursued their dreams abroad with ACS Group. We understand the unique challenges and opportunities for Indian students.</p>
+              
+              <h4>Popular Destinations for Indian Students:</h4>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-plane text-primary me-2" aria-hidden="true"></i> USA - STEM Programs & H1B Opportunities
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-plane text-primary me-2" aria-hidden="true"></i> Canada - Express Entry & PR Pathways
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-plane text-primary me-2" aria-hidden="true"></i> Australia - Graduate Visa Programs
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-plane text-primary me-2" aria-hidden="true"></i> UK - Post-Study Work Visa
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="country-info">
+              <h3 class="gradient-text">💼 Career Services</h3>
+              <p>From IT professionals to healthcare workers, we help Indian talent find global opportunities matching their skills and aspirations.</p>
+              
+              <div class="mt-4">
+                <h5>Pricing in Indian Rupees:</h5>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="glass p-3">
+                      <h6>Basic Counseling</h6>
+                      <div class="currency-display h5">₹7,500</div>
+                      <small class="text-muted">Education guidance session</small>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="glass p-3">
+                      <h6>Complete Package</h6>
+                      <div class="currency-display h5">₹25,000</div>
+                      <small class="text-muted">End-to-end support</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mt-5">
+          <div class="col-lg-8 mx-auto">
+            <div class="contact-form">
+              <h4 class="text-center mb-4">Contact Our India Office</h4>
+              <form id="indiaContactForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="आपका नाम / Your Name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="tel" class="form-control" placeholder="+91 Mobile Number" required>
+                  </div>
+                  <div class="col-12">
+                    <select class="form-control" required>
+                      <option value="">Select Service</option>
+                      <option value="study-usa">Study in USA</option>
+                      <option value="study-canada">Study in Canada</option>
+                      <option value="study-uk">Study in UK</option>
+                      <option value="job-placement">Job Placement</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <textarea class="form-control" rows="4" placeholder="Your Message / आपका संदेश" required></textarea>
+                  </div>
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-gradient">
+                      <i class="fas fa-paper-plane me-2" aria-hidden="true"></i>Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-4">
+          <div class="glass p-3 d-inline-block">
+            <p class="mb-1"><strong>India Office:</strong></p>
+            <p class="mb-1">📍 Sector 18, Noida, Delhi NCR</p>
+            <p class="mb-1">📞 +91 9876 543 210</p>
+            <p class="mb-0">✉️ india@acsbridge.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UK Page -->
+    <section id="uk-page" class="page-section" aria-label="UK services page">
+      <div class="country-hero">
+        <div class="container-fluid text-center">
+          <div class="country-flag">🇬🇧</div>
+          <h1>ACS Group United Kingdom</h1>
+          <p class="lead">Hello! Your gateway to British education and European opportunities.</p>
+        </div>
+      </div>
+      
+      <div class="container-fluid py-5">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="country-info">
+              <h3 class="gradient-text">🎓 UK Education Excellence</h3>
+              <p>Home to world-renowned universities like Oxford, Cambridge, and Imperial College. The UK offers shorter degree programs and excellent post-study work opportunities.</p>
+              
+              <h4>Why Study in the UK?</h4>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-crown text-primary me-2" aria-hidden="true"></i> World's oldest universities
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-clock text-primary me-2" aria-hidden="true"></i> Shorter degree duration
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-briefcase text-primary me-2" aria-hidden="true"></i> Graduate Route visa (2 years)
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-globe-europe text-primary me-2" aria-hidden="true"></i> Gateway to Europe
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="country-info">
+              <h3 class="gradient-text">💼 UK Career Opportunities</h3>
+              <p>From London's financial district to Manchester's tech scene, the UK offers diverse career opportunities across industries.</p>
+              
+              <div class="mt-4">
+                <h5>Services Pricing (GBP):</h5>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="glass p-3">
+                      <h6>University Application</h6>
+                      <div class="currency-display h5">£199</div>
+                      <small class="text-muted">UCAS application support</small>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="glass p-3">
+                      <h6>Visa Consultation</h6>
+                      <div class="currency-display h5">£99</div>
+                      <small class="text-muted">Student visa guidance</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-4">
+          <div class="glass p-3 d-inline-block">
+            <p class="mb-1"><strong>UK Office:</strong></p>
+            <p class="mb-1">📍 25 Oxford Street, London W1D 2DW</p>
+            <p class="mb-1">📞 +44 20 7123 4567</p>
+            <p class="mb-0">✉️ uk@acsbridge.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- France Page -->
+    <section id="france-page" class="page-section" aria-label="France services page">
+      <div class="country-hero">
+        <div class="container-fluid text-center">
+          <div class="country-flag">🇫🇷</div>
+          <h1>ACS Group France</h1>
+          <p class="lead">Bonjour! Discover excellence in French education and European career opportunities.</p>
+        </div>
+      </div>
+      
+      <div class="container-fluid py-5">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="country-info">
+              <h3 class="gradient-text">🎓 Études en France</h3>
+              <p>France offers world-class education with affordable tuition fees, especially at public universities. Experience rich culture while pursuing your academic goals.</p>
+              
+              <h4>Popular Programs:</h4>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-flask text-primary me-2" aria-hidden="true"></i> Engineering & Sciences
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-paint-brush text-primary me-2" aria-hidden="true"></i> Arts & Fashion
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-chart-line text-primary me-2" aria-hidden="true"></i> Business & Management
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-utensils text-primary me-2" aria-hidden="true"></i> Culinary Arts
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="country-info">
+              <h3 class="gradient-text">💼 Carrières en France</h3>
+              <p>France's strong economy offers opportunities in luxury goods, aerospace, technology, and renewable energy sectors.</p>
+              
+              <div class="mt-4">
+                <h5>Prix des Services (EUR):</h5>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="glass p-3">
+                      <h6>Conseil Éducatif</h6>
+                      <div class="currency-display h5">€89</div>
+                      <small class="text-muted">Session de conseil</small>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="glass p-3">
+                      <h6>Support Campus France</h6>
+                      <div class="currency-display h5">€149</div>
+                      <small class="text-muted">Application complète</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-4">
+          <div class="glass p-3 d-inline-block">
+            <p class="mb-1"><strong>Bureau France:</strong></p>
+            <p class="mb-1">📍 15 Avenue des Champs-Élysées, 75008 Paris</p>
+            <p class="mb-1">📞 +33 1 42 86 83 00</p>
+            <p class="mb-0">✉️ france@acsbridge.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Poland Page -->
+    <section id="poland-page" class="page-section" aria-label="Poland services page">
+      <div class="country-hero">
+        <div class="container-fluid text-center">
+          <div class="country-flag">🇵🇱</div>
+          <h1>ACS Group Polska</h1>
+          <p class="lead">Cześć! Gateway to affordable European education and growing opportunities in Central Europe.</p>
+        </div>
+      </div>
+      
+      <div class="container-fluid py-5">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="country-info">
+              <h3 class="gradient-text">🎓 Studia w Polsce</h3>
+              <p>Poland offers high-quality education at very affordable costs, with many programs taught in English. It's your affordable gateway to the European Union.</p>
+              
+              <h4>Study Advantages:</h4>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-euro-sign text-primary me-2" aria-hidden="true"></i> Very affordable tuition fees
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-language text-primary me-2" aria-hidden="true"></i> English-taught programs
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-map-marked-alt text-primary me-2" aria-hidden="true"></i> Central European location
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-handshake text-primary me-2" aria-hidden="true"></i> EU work opportunities
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="country-info">
+              <h3 class="gradient-text">💼 Kariera w Polsce</h3>
+              <p>Poland's rapidly growing economy, especially in IT, manufacturing, and services, offers excellent career prospects for international professionals.</p>
+              
+              <div class="mt-4">
+                <h5>Ceny Usług (PLN):</h5>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="glass p-3">
+                      <h6>Doradztwo Edukacyjne</h6>
+                      <div class="currency-display h5">199 zł</div>
+                      <small class="text-muted">Sesja doradcza</small>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="glass p-3">
+                      <h6>Pomoc w Aplikacji</h6>
+                      <div class="currency-display h5">399 zł</div>
+                      <small class="text-muted">Pełne wsparcie</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-4">
+          <div class="glass p-3 d-inline-block">
+            <p class="mb-1"><strong>Biuro Polska:</strong></p>
+            <p class="mb-1">📍 ul. Marszałkowska 84/92, 00-514 Warszawa</p>
+            <p class="mb-1">📞 +48 22 123 45 67</p>
+            <p class="mb-0">✉️ poland@acsbridge.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Canada Page -->
+    <section id="canada-page" class="page-section" aria-label="Canada services page">
+      <div class="country-hero">
+        <div class="container-fluid text-center">
+          <div class="country-flag">🇨🇦</div>
+          <h1>ACS Group Canada</h1>
+          <p class="lead">Welcome! Your pathway to quality education and permanent residence in the True North.</p>
+        </div>
+      </div>
+      
+      <div class="container-fluid py-5">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="country-info">
+              <h3 class="gradient-text">🎓 Study in Canada</h3>
+              <p>Canada welcomes international students with open arms, offering world-class education, multicultural environment, and clear pathways to permanent residence.</p>
+              
+              <h4>Canadian Education Benefits:</h4>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-maple-leaf text-primary me-2" aria-hidden="true"></i> Post-Graduation Work Permit
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-home text-primary me-2" aria-hidden="true"></i> Clear PR pathways
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-users text-primary me-2" aria-hidden="true"></i> Multicultural society
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="fas fa-shield-alt text-primary me-2" aria-hidden="true"></i> Safe & welcoming environment
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="country-info">
+              <h3 class="gradient-text">💼 Canadian Careers</h3>
+              <p>From Vancouver's tech scene to Toronto's financial hub, Canada offers diverse opportunities across provinces and territories.</p>
+              
+              <div class="mt-4">
+                <h5>Service Pricing (CAD):</h5>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="glass p-3">
+                      <h6>Study Permit Consultation</h6>
+                      <div class="currency-display h5">CAD $149</div>
+                      <small class="text-muted">Complete visa guidance</small>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="glass p-3">
+                      <h6>PR Pathway Consultation</h6>
+                      <div class="currency-display h5">CAD $199</div>
+                      <small class="text-muted">Express Entry guidance</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-4">
+          <div class="glass p-3 d-inline-block">
+            <p class="mb-1"><strong>Canada Office (Head Office):</strong></p>
+            <p class="mb-1">📍 123 Global Business Hub, Calgary, AB T2P 2M5</p>
+            <p class="mb-1">📞 +1 (403) 123-4567</p>
+            <p class="mb-0">✉️ canada@acsbridge.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Theme Preview Page -->
+    <section id="theme-preview-page" class="page-section" aria-label="Color theme preview page">
+      <div class="container-fluid py-5">
+        <div class="text-center mb-5">
+          <h2 class="gradient-text">Color Theme Preview</h2>
+          <p class="subtitle">New professional color palette with WCAG AA compliance</p>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <h3>Color Palette</h3>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="glass p-3 text-center">
+                  <div style="background: var(--primary); height: 60px; border-radius: 8px; margin-bottom: 1rem;"></div>
+                  <strong>Primary</strong><br>
+                  <code style="font-size: 0.9rem;">#0D47A1</code>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="glass p-3 text-center">
+                  <div style="background: var(--accent); height: 60px; border-radius: 8px; margin-bottom: 1rem;"></div>
+                  <strong>Accent</strong><br>
+                  <code style="font-size: 0.9rem;">#FFC107</code>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="glass p-3 text-center">
+                  <div style="background: var(--success); height: 60px; border-radius: 8px; margin-bottom: 1rem;"></div>
+                  <strong>Success</strong><br>
+                  <code style="font-size: 0.9rem;">#2E7D32</code>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="glass p-3 text-center">
+                  <div style="background: var(--error); height: 60px; border-radius: 8px; margin-bottom: 1rem;"></div>
+                  <strong>Error</strong><br>
+                  <code style="font-size: 0.9rem;">#E53935</code>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <h3>Accessibility Check</h3>
+            <div class="glass p-4">
+              <h5>WCAG Contrast Ratios</h5>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span>Primary on White</span>
+                  <span class="badge" style="background: var(--success);">8.9:1 ✓ AAA</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span>Text on Background</span>
+                  <span class="badge" style="background: var(--success);">16.4:1 ✓ AAA</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span>Accent on White</span>
+                  <span class="badge" style="background: var(--warning); color: var(--text);">2.8:1 ⚠ Large Text Only</span>
+                </div>
+              </div>
+              
+              <h6>Sample Text Combinations:</h6>
+              <div class="p-3 mb-2" style="background: var(--primary); color: white;">
+                Primary background with white text - Perfect readability
+              </div>
+              <div class="p-3 mb-2" style="background: var(--surface); color: var(--text);">
+                Surface background with primary text - Excellent contrast
+              </div>
+              <div class="p-3 mb-2" style="background: var(--accent); color: var(--text);">
+                Accent background - Use sparingly for highlights only
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-5">
+          <h3 class="text-center mb-4">Component Examples</h3>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="business-card">
+                <div class="icon"><i class="fas fa-star"></i></div>
+                <h4>Updated Design</h4>
+                <p class="text-muted">Cards now use the new color scheme with improved contrast and accessibility.</p>
+                <button class="btn btn-gradient btn-sm">Learn More</button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="glass p-4 text-center">
+                <i class="fas fa-palette fs-2 mb-3" style="color: var(--accent);"></i>
+                <h5>Enhanced Colors</h5>
+                <p class="text-muted">Professional blue and gold palette that conveys trust and excellence.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="service-card">
+                <div class="icon"><i class="fas fa-universal-access"></i></div>
+                <h5>Accessible Design</h5>
+                <p class="text-muted">All color combinations meet or exceed WCAG AA standards for accessibility.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- iRaises Page -->
+    <section id="iraises-page" class="page-section" aria-label="iRaises study abroad services">
+      <div class="container-fluid">
+        <div class="text-center mb-5">
+          <h2 class="gradient-text">iRaises - Global Education Solutions</h2>
+          <p class="subtitle">Your trusted partner for a successful journey to global education. Over 15 years of experience.</p>
+        </div>
+        
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <img style="width: 800px; height: 800px;" src="images/raisesws.png" alt="">
+            <!-- <img src="https://images.unsplash.com/photo-1549495764-162e7a032d84?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Students studying together" 
+                 class="img-fluid rounded-4"> -->
+          </div>
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <h3 class="gradient-text">Your Gateway to Global Campuses</h3>
+            <p>At iRaises, our mission is to empower students to achieve their dreams of studying abroad. With over 15 years of dedicated experience, we provide personalized, ethical, and transparent guidance every step of the way.</p>
+            
+            <h4 class="mt-4">Why Choose Us?</h4>
+            <ul class="list-unstyled">
+              <li class="d-flex align-items-center mb-2">
+                <i class="fas fa-check-circle me-2" style="color: var(--success);" aria-hidden="true"></i> 
+                Experienced & Certified Counselors
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="fas fa-check-circle me-2" style="color: var(--success);" aria-hidden="true"></i> 
+                Personalized Profile Analysis & Guidance
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="fas fa-check-circle me-2" style="color: var(--success);" aria-hidden="true"></i> 
+                Strong Network of Global Universities
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="fas fa-check-circle me-2" style="color: var(--success);" aria-hidden="true"></i> 
+                End-to-End Application & Visa Support
+              </li>
+            </ul>
+            <button class="btn btn-gradient mt-3" onclick="showPage('contact')">Get a Free Consultation</button>
+          </div>
+        </div>
+        
+        <h3 class="text-center mb-4 mt-5 gradient-text">Our Step-by-Step Process</h3>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <h5>Counseling & Profile Analysis</h5>
+              <p class="text-muted">We start with a detailed one-on-one session to understand your academic background, career goals, and preferences.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <h5>University & Course Selection</h5>
+              <p class="text-muted">Our experts help you shortlist the best-fit universities and programs based on your profile and aspirations.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <h5>Application & Documentation</h5>
+              <p class="text-muted">We guide you through preparing and submitting a flawless application, including SOP, LOR, and other crucial documents.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <h5>Visa & Pre-Departure</h5>
+              <p class="text-muted">From visa application to accommodation and travel arrangements, we ensure a smooth transition to your new country.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-center mb-4 mt-5 gradient-text">Our Comprehensive Services</h3>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-search"></i></div>
+              <h5>University Shortlisting</h5>
+              <p class="text-muted">Personalized selection of universities and programs based on your profile, interests, and budget.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-file-alt"></i></div>
+              <h5>Application & Admission</h5>
+              <p class="text-muted">End-to-end support for application preparation, documentation, and follow-up with universities.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-passport"></i></div>
+              <h5>Visa & Documentation</h5>
+              <p class="text-muted">Expert assistance with visa application, interview coaching, and preparing all necessary documents.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+              <h5>Scholarship Guidance</h5>
+              <p class="text-muted">Helping you identify and apply for scholarships and financial aid to make your education affordable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AsiaPride Global Page -->
+    <section id="asiapride-page" class="page-section" aria-label="AsiaPride Global career services">
+      <div class="container-fluid">
+        <div class="text-center mb-5">
+          <h2 class="gradient-text">AsiaPride Global - From Dreams to Destinations</h2>
+          <p class="subtitle">A premier placement service connecting talent with global opportunities.</p>
+        </div>
+        
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6 order-lg-2">
+            <img  src="images/AsiaPride-Photoroom.png" alt="">
+            <!-- <img src="https://images.unsplash.com/photo-1552664730-d307ca8849d1?auto=format&fit=crop&w=800&q=80" 
+                 alt="Professional team working" 
+                 class="img-fluid rounded-4"> -->
+          </div>
+          <div class="col-lg-6 order-lg-1 mt-4 mt-lg-0">
+            <h3 class="gradient-text">Your Global Career Partner</h3>
+            <p>AsiaPride Global offers professional placement services with a strong network across all major industries and countries. We help talented individuals find the right opportunities to advance their careers, no matter where they are in the world.</p>
+            
+            <div class="row mt-4">
+              <div class="col-6">
+                <div class="stat-counter" data-target="1000">0</div>
+                <small class="text-muted">Jobs Placed</small>
+              </div>
+              <div class="col-6">
+                <div class="stat-counter" data-target="95">0</div>
+                <small class="text-muted">Success Rate %</small>
+              </div>
+            </div>
+            <button class="btn btn-gradient mt-3" onclick="showPage('contact')">Find Your Dream Job</button>
+          </div>
+        </div>
+        
+        <h3 class="text-center mb-4 gradient-text">Our Expertise</h3>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-globe"></i></div>
+              <h5>Global Job Placements</h5>
+              <p class="text-muted">Connecting skilled professionals with top companies worldwide across various sectors.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-search"></i></div>
+              <h5>Executive Search & Recruitment</h5>
+              <p class="text-muted">Specialized search and recruitment for senior-level and leadership positions.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-chart-line"></i></div>
+              <h5>Career Development</h5>
+              <p class="text-muted">Workshops and personalized coaching to enhance your professional skills and profile.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TradeLink Page -->
+    <section id="tradelink-page" class="page-section" aria-label="TradeLink trade services">
+      <div class="container-fluid">
+        <div class="text-center mb-5">
+          <h2 class="gradient-text">TradeLink - Global Export & Import Solutions</h2>
+          <p class="subtitle">Streamlining international trade for businesses worldwide</p>
+        </div>
+        
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <h3 class="gradient-text">Expand Your Business Globally</h3>
+            <p class="lead">TradeLink provides comprehensive consultancy for export and import businesses. We streamline the entire process, from market analysis and logistics to customs clearance, helping your business expand globally with confidence.</p>
+            
+            <h4 class="mt-4">Our Trade Services:</h4>
+            <div class="row g-3 mt-3">
+              <div class="col-md-6">
+                <div class="service-card text-start">
+                  <div class="icon text-start"><i class="fas fa-truck-moving"></i></div>
+                  <h6>Logistics & Supply Chain</h6>
+                  <small class="text-muted">End-to-end logistics management</small>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="service-card text-start">
+                  <div class="icon text-start"><i class="fas fa-file-invoice"></i></div>
+                  <h6>Documentation & Compliance</h6>
+                  <small class="text-muted">Legal documentation support</small>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="service-card text-start">
+                  <div class="icon text-start"><i class="fas fa-chart-bar"></i></div>
+                  <h6>Market Analysis</h6>
+                  <small class="text-muted">Strategic market insights</small>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="service-card text-start">
+                  <div class="icon text-start"><i class="fas fa-handshake"></i></div>
+                  <h6>International Partnerships</h6>
+                  <small class="text-muted">Global network connections</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img  style="width: 1000px; height: 800px;" src="images/977838-optimize-your-shipping-with-smart-loads-geodis-united-states.jpg" alt="">
+            <!-- <img src="https://www.bing.com/images/search?view=detailV2&ccid=nYFSyLXu&id=FB5AF2066C13F749D1A88B0C5D83D06332B1B67E&thid=OIP.nYFSyLXuh_eplR3gC2ohUwHaEK&mediaurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fcolorful-shipping-containers-stacked-busy-international-port-create-vibrant-scene-343059483.jpg&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.9d8152c8b5ee87f7a9951de00b6a2153%3Frik%3DfraxMmPQg10Miw%26pid%3DImgRaw%26r%3D0&exph=449&expw=800&q=global+shipping+containers+hd+images+for+website+design&FORM=IRPRST&ck=BC22C7CA433E80F31F9F425FD267EFE7&selectedIndex=38&itb=0&cw=1721&ch=839&ajaxhist=0&ajaxserp=0"
+            alt="Global shipping container" 
+                 class="img-fluid rounded-4"> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Services Page -->
+    <section id="services-page" class="page-section" aria-label="Services and payment page">
+      <div class="container-fluid">
+        <div class="text-center mb-5">
+          <h2 class="gradient-text">Our Services & Payment</h2>
+          <p class="subtitle">Choose from our range of professional services and make a secure payment.</p>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="glass p-4 h-100">
+              <div class="text-center">
+                <i class="fas fa-book-open fs-1 mb-3" style="color: var(--primary);" aria-hidden="true"></i>
+                <h5 class="gradient-text">Education Counseling</h5>
+                <p class="text-muted">A dedicated session to map out your academic and career goals.</p>
+                <div class="mt-4">
+                  <div class="h4 gradient-text">$99</div>
+                  <button class="btn btn-gradient mt-3" onclick="processPayment('Education Counseling', 99)">Pay Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="glass p-4 h-100">
+              <div class="text-center">
+                <i class="fas fa-user-tie fs-1 mb-3" style="color: var(--primary-light);" aria-hidden="true"></i>
+                <h5 class="gradient-text">Professional Resume Review</h5>
+                <p class="text-muted">Expert review and optimization of your resume for global standards.</p>
+                <div class="mt-4">
+                  <div class="h4 gradient-text">$49</div>
+                  <button class="btn btn-gradient mt-3" onclick="processPayment('Resume Review', 49)">Pay Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="glass p-4 h-100">
+              <div class="text-center">
+                <i class="fas fa-money-check-alt fs-1 mb-3" style="color: var(--accent);" aria-hidden="true"></i>
+                <h5 class="gradient-text">Trade Consultation</h5>
+                <p class="text-muted">A one-on-one session to discuss your import/export strategy.</p>
+                <div class="mt-4">
+                  <div class="h4 gradient-text">$149</div>
+                  <button class="btn btn-gradient mt-3" onclick="processPayment('Trade Consultation', 149)">Pay Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Page -->
+    <section id="contact-page" class="page-section" aria-label="Contact information and form">
+      <div class="container-fluid">
+        <div class="text-center mb-5">
+          <h2 class="gradient-text">Get In Touch</h2>
+          <p class="subtitle">Ready to start your journey? Let's connect and make it happen.</p>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="contact-form">
+              <form id="contactForm">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <label for="contact-name" class="form-label sr-only">Your Name</label>
+                    <input type="text" class="form-control" id="contact-name" placeholder="Your Name" name="name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contact-email" class="form-label sr-only">Your Email</label>
+                    <input type="email" class="form-control" id="contact-email" placeholder="Your Email" name="email" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contact-phone" class="form-label sr-only">Phone Number</label>
+                    <input type="tel" class="form-control" id="contact-phone" placeholder="Phone Number" name="phone" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contact-service" class="form-label sr-only">Select Service</label>
+                    <select class="form-control" id="contact-service" name="service" required>
+                      <option value="">Select Service</option>
+                      <option value="iraises">Study Abroad (iRaises)</option>
+                      <option value="asiapride">Job Placement (AsiaPride)</option>
+                      <option value="tradelink">Trade Consulting (TradeLink)</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="contact-subject" class="form-label sr-only">Subject</label>
+                    <input type="text" class="form-control" id="contact-subject" placeholder="Subject" name="subject" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="contact-message" class="form-label sr-only">Your Message</label>
+                    <textarea class="form-control" id="contact-message" placeholder="Your Message" rows="5" name="message" required></textarea>
+                  </div>
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-gradient btn-lg">
+                      <i class="fas fa-paper-plane me-2" aria-hidden="true"></i>Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="row g-4 mt-5">
+          <div class="col-md-4">
+            <div class="glass p-4 text-center h-100">
+              <i class="fas fa-map-marker-alt fs-2 mb-3" style="color: var(--primary);" aria-hidden="true"></i>
+              <h5>Visit Us</h5>
+              <p class="text-muted">123 Global Business Hub<br>Calgary, Alberta, Canada</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="glass p-4 text-center h-100">
+              <i class="fas fa-phone fs-2 mb-3" style="color: var(--primary-light);" aria-hidden="true"></i>
+              <h5>Call Us</h5>
+              <p class="text-muted">+1 (403) 123-4567<br>+91 98765 43210</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="glass p-4 text-center h-100">
+              <i class="fas fa-envelope fs-2 mb-3" style="color: var(--accent);" aria-hidden="true"></i>
+              <h5>Email Us</h5>
+              <p class="text-muted">info@.com<br>support@acsbridge.com</p>
+            </div>acsbridge
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container-fluid">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a href="#" class="gradient-text h3 text-decoration-none" onclick="showPage('home')">ACS Group</a>
+          <p class="text-muted mt-3">Aadhya Consultancy Services. A trusted name in education, placements, and business since 2012 Connecting dreams with destinations worldwide.</p>
+          <div class="social-share mt-4">
+            <a href="https://wa.me/919876543210" class="social-btn social-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a href="https://linkedin.com/company/acsbridge" class="social-btn social-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://instagram.com/acsbridge" class="social-btn social-instagram" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/acsbridge" class="social-btn social-twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-6">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" onclick="showPage('home')" class="text-muted">Home</a></li>
+            <li><a href="#" onclick="showPage('iraises')" class="text-muted">iRaises</a></li>
+            <li><a href="#" onclick="showPage('asiapride')" class="text-muted">AsiaPride Global</a></li>
+            <li><a href="#" onclick="showPage('tradelink')" class="text-muted">TradeLink</a></li>
+            <li><a href="#" onclick="showPage('services')" class="text-muted">Services</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-6">
+          <h5>Countries</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" onclick="showPage('india')" class="text-muted">🇮🇳 India</a></li>
+            <li><a href="#" onclick="showPage('uk')" class="text-muted">🇬🇧 United Kingdom</a></li>
+            <li><a href="#" onclick="showPage('france')" class="text-muted">🇫🇷 France</a></li>
+            <li><a href="#" onclick="showPage('poland')" class="text-muted">🇵🇱 Poland</a></li>
+            <li><a href="#" onclick="showPage('canada')" class="text-muted">🇨🇦 Canada</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <h5>Global Offices</h5>
+          <div class="row g-2 text-muted small">
+            <div class="col-6">🇨🇦 Calgary, Canada</div>
+            <div class="col-6">🇮🇳 Delhi NCR, India</div>
+            <div class="col-6">🇬🇧 London, UK</div>
+            <div class="col-6">🇫🇷 Paris, France</div>
+            <div class="col-6">🇵🇱 Warsaw, Poland</div>
+            <div class="col-6">🌍 More locations</div>
+          </div>
+          
+          <div class="mt-4">
+            <h6>Legal</h6>
+            <p class="text-muted small">
+              <a href="#" onclick="showModal('privacy')" class="text-muted me-3">Privacy Policy</a>
+              <a href="#" onclick="showModal('terms')" class="text-muted me-3">Terms of Service</a>
+              <a href="#" onclick="showModal('cookies')" class="text-muted">Cookie Policy</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <hr style="border-color: var(--border-color); margin: 3rem 0 2rem;">
+      
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="text-muted mb-0">&copy; 2024 ACS Group. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="text-muted mb-0">
+            <span id="liveClock"></span>
+            <button class="btn btn-link text-muted btn-sm ms-3" onclick="showPage('theme-preview')">View Theme</button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" rel="noopener" 
+     title="Chat with us on WhatsApp" aria-label="WhatsApp support">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Global Variables and Configuration
+    const CONFIG = {
+      currentPage: 'home',
+      animationsEnabled: true,
+      visitCount: 0,
+      userEngagement: {
+        pageViews: {},
+        interactions: 0,
+        timeSpent: {}
+      }
+    };
+
+    // Utility Functions
+    function formatCurrency(amount, currency = 'USD') {
+      const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: currency
+      });
+      return formatter.format(amount);
+    }
+
+    function handleKeyPress(event, pageId) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        showPage(pageId);
+      }
+    }
+
+    // Page Management
+    const pageSections = document.querySelectorAll('.page-section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function showPage(pageId) {
+      // Hide all pages
+      pageSections.forEach(section => section.classList.remove('active'));
+      
+      // Show target page
+      const targetPage = document.getElementById(`${pageId}-page`);
+      if (targetPage) {
+        targetPage.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        updateActiveLink(pageId);
+        CONFIG.currentPage = pageId;
+        
+        // Update page metadata
+        updatePageMetadata(pageId);
+        
+        // Animate statistics if needed
+        if (pageId === 'home' || pageId === 'asiapride') {
+          setTimeout(animateCounters, 500);
+        }
+
+        // Track page views
+        trackPageView(pageId);
+        
+        // Show success message
+        showToast('Page Loaded', `Welcome to ${getPageTitle(pageId)}`, null, 'success');
+      }
+    }
+
+    function updatePageMetadata(pageId) {
+      const pageTitles = {
+        'home': 'ACS Group - Your Partner for Global Success',
+        'iraises': 'iRaises - Study Abroad Consultancy | ACS Group',
+        'asiapride': 'AsiaPride Global - Career Placement Services | ACS Group',
+        'tradelink': 'TradeLink - Import Export Solutions | ACS Group',
+        'services': 'Professional Services & Pricing | ACS Group',
+        'contact': 'Contact ACS Group - Get Started Today',
+        'india': 'ACS Group India - Study Abroad & Career Services',
+        'uk': 'ACS Group UK - British Education & Careers',
+        'france': 'ACS Group France - Études et Carrières',
+        'poland': 'ACS Group Poland - Studia i Kariera',
+        'canada': 'ACS Group Canada - Education & Immigration',
+        'theme-preview': 'Color Theme Preview | ACS Group'
+      };
+      
+      document.title = pageTitles[pageId] || 'ACS Group';
+    }
+
+    function getPageTitle(pageId) {
+      const titles = {
+        'home': 'Home',
+        'iraises': 'iRaises Study Abroad',
+        'asiapride': 'AsiaPride Global Careers',
+        'tradelink': 'TradeLink Trade Solutions',
+        'services': 'Our Services',
+        'contact': 'Contact Us',
+        'india': 'ACS India',
+        'uk': 'ACS United Kingdom',
+        'france': 'ACS France',
+        'poland': 'ACS Poland',
+        'canada': 'ACS Canada',
+        'theme-preview': 'Theme Preview'
+      };
+      return titles[pageId] || pageId;
+    }
+
+    function updateActiveLink(pageId) {
+      navLinks.forEach(link => {
+        const linkPage = link.getAttribute('data-page');
+        if (linkPage === pageId) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+
+    // Navigation Event Listeners
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const pageId = this.getAttribute('data-page');
+        if (pageId) {
+          showPage(pageId);
+          // Close mobile menu
+          const navbarCollapse = document.getElementById('navbarNav');
+          if (navbarCollapse.classList.contains('show')) {
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+            if (bsCollapse) bsCollapse.hide();
+          }
+        }
+      });
+    });
+
+    // Dropdown menu handlers
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const pageId = this.getAttribute('data-page');
+        if (pageId) {
+          showPage(pageId);
+        }
+      });
+    });
+
+    // Statistics Counter Animation
+    function animateCounters() {
+      const counters = document.querySelectorAll('.stat-counter');
+      
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        if (!target) return;
+        
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            counter.textContent = target + (target === 95 ? '%' : '+');
+            clearInterval(timer);
+          } else {
+            counter.textContent = Math.floor(current) + (target === 95 ? '%' : '+');
+          }
+        }, 16);
+      });
+    }
+
+    // Contact Form Handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+      
+      // Form validation
+      if (!data.name || !data.email || !data.message) {
+        showToast('Validation Error', 'Please fill in all required fields.', null, 'error');
+        return;
+      }
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(data.email)) {
+        showToast('Invalid Email', 'Please enter a valid email address.', null, 'error');
+        return;
+      }
+      
+      // Simulate form submission
+      showToast('Sending Message...', 'Please wait while we process your request.', null, 'info');
+      
+      setTimeout(() => {
+        showToast('Message Sent!', `Thank you ${data.name}! We'll get back to you within 24 hours.`, null, 'success');
+        this.reset();
+        
+        // Track successful form submission
+        CONFIG.userEngagement.interactions += 5;
+      }, 2000);
+    });
+
+    // Country-specific form handlers
+    const indiaForm = document.getElementById('indiaContactForm');
+    if (indiaForm) {
+      indiaForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        showToast('धन्यवाद!', 'Your message has been sent to our India office. हमारी टीम जल्द ही संपर्क करेगी।', null, 'success');
+        this.reset();
+      });
+    }
+
+    // Social Sharing Functions
+    function shareService(serviceName, platform) {
+      const url = window.location.href;
+      const text = `Check out ${serviceName} by ACS Group - Your partner for global success!`;
+      
+      let shareUrl = '';
+      
+      switch(platform) {
+        case 'linkedin':
+          shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+          break;
+        case 'whatsapp':
+          shareUrl = `https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`;
+          break;
+        case 'instagram':
+          showToast('Instagram Sharing', 'Follow us @acsbridge for updates!', null, 'info');
+          return;
+        case 'twitter':
+          shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+          break;
+      }
+      
+      if (shareUrl) {
+        window.open(shareUrl, '_blank', 'width=600,height=400,noopener,noreferrer');
+        showToast('Sharing', `Opening ${platform} to share ${serviceName}`, null, 'info');
+      }
+    }
+
+    // Payment Processing
+    function processPayment(service, amount) {
+      showToast('Payment Processing', `Processing payment for ${service} - ${formatCurrency(amount)}`, null, 'info');
+      
+      // Simulate payment gateway
+      setTimeout(() => {
+        showToast('Connecting to Payment Gateway', 'Establishing secure connection...', null, 'info');
+      }, 1000);
+      
+      setTimeout(() => {
+        showToast('Payment Successful!', `Thank you for choosing ${service}. We'll contact you within 24 hours.`, null, 'success');
+        
+        // Auto-navigate to contact page
+        setTimeout(() => {
+          showPage('contact');
+        }, 2000);
+      }, 3000);
+    }
+
+    // Toast Notification System
+    function showToast(title, message, callback = null, type = 'info') {
+      const toastContainer = document.getElementById('toastContainer');
+      const toastId = 'toast-' + Date.now();
+      
+      const toastColors = {
+        info: 'var(--info)',
+        success: 'var(--success)',
+        error: 'var(--error)',
+        warning: 'var(--warning)'
+      };
+      
+      const toast = document.createElement('div');
+      toast.className = 'toast show';
+      toast.id = toastId;
+      toast.setAttribute('role', 'alert');
+      toast.setAttribute('aria-live', 'assertive');
+      toast.setAttribute('aria-atomic', 'true');
+      
+      toast.innerHTML = `
+        <div class="toast-header" style="background: ${toastColors[type]}; color: white; border: none;">
+          <strong class="me-auto">${title}</strong>
+          <button type="button" class="btn-close btn-close-white" onclick="this.closest('.toast').remove()" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" style="background: var(--card-background); color: var(--text);">
+          ${message}
+          ${callback ? '<br><button class="btn btn-sm btn-gradient mt-2" onclick="' + callback.toString() + '(); this.closest(\'.toast\').remove();">View</button>' : ''}
+        </div>
+      `;
+      
+      toastContainer.appendChild(toast);
+      
+      // Auto-remove after 5 seconds
+      setTimeout(() => {
+        if (toast.parentNode) {
+          toast.style.opacity = '0';
+          setTimeout(() => toast.remove(), 300);
+        }
+      }, 5000);
+    }
+
+    // Modal System for Legal Pages
+    function showModal(type) {
+      const modalContent = {
+        privacy: {
+          title: 'Privacy Policy',
+          content: 'ACS Group respects your privacy and protects your personal information according to international data protection standards including GDPR and PIPEDA. We collect only necessary information to provide our services and never share your data without consent.'
+        },
+        terms: {
+          title: 'Terms of Service',
+          content: 'By using ACS Group services, you agree to our terms and conditions. We provide consultancy services with professional integrity and commitment to your success. All information provided is for guidance purposes.'
+        },
+        cookies: {
+          title: 'Cookie Policy',
+          content: 'We use essential cookies to enhance your browsing experience and analyze website traffic. You can control cookie preferences in your browser settings. No personal data is tracked without consent.'
+        }
+      };
+      
+      const modal = modalContent[type];
+      if (modal) {
+        showToast(modal.title, modal.content, null, 'info');
+      }
+    }
+
+    // Real-time Clock
+    function updateClock() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString('en-US', { 
+        timeZone: 'America/Edmonton',
+        hour12: true,
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+      
+      const clockElement = document.getElementById('liveClock');
+      if (clockElement) {
+        clockElement.innerHTML = `Calgary Time: ${timeString}`;
+      }
+    }
+
+    // Analytics & Tracking
+    function trackPageView(pageId) {
+      CONFIG.visitCount++;
+      CONFIG.userEngagement.pageViews[pageId] = (CONFIG.userEngagement.pageViews[pageId] || 0) + 1;
+      CONFIG.userEngagement.interactions++;
+      
+      // User engagement triggers
+      if (CONFIG.visitCount === 3) {
+        showToast('Exploring ACS?', 'You seem interested! Would you like to schedule a free consultation?', () => showPage('contact'), 'info');
+      }
+      
+      if (CONFIG.userEngagement.interactions === 10) {
+        showToast('Highly Engaged!', 'You\'ve explored our services thoroughly. Ready to get started?', () => showPage('contact'), 'success');
+      }
+    }
+
+    // Application Initialization
+    function initializeApp() {
+      animateCounters();
+      updateClock();
+      
+      // Set up clock updates
+      setInterval(updateClock, 60000); // Update every minute
+      
+      // Initial page setup
+      showPage('home');
+      
+      console.log('ACS Group Website - Production Ready! 🚀');
+    }
+
+    // Loading Screen Management
+    window.addEventListener('load', function() {
+      setTimeout(() => {
+        const loading = document.getElementById('loading');
+        if (loading) {
+          loading.classList.add('hidden');
+          setTimeout(() => loading.remove(), 500);
+        }
+        
+        // Initialize features
+        initializeApp();
+        
+        // Welcome message
+        setTimeout(() => {
+          showToast('Welcome to ACS Group!', 'Explore our global services and start your journey today. Use the navigation or country dropdown to browse.', null, 'success');
+        }, 1000);
+      }, 1500);
+    });
+
+    // Keyboard Shortcuts
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey || e.metaKey) {
+        switch(e.key) {
+          case '/':
+            e.preventDefault();
+            showToast('Search', 'Use the navigation menu or country dropdown to find what you need!', null, 'info');
+            break;
+          case '1':
+            e.preventDefault();
+            showPage('home');
+            break;
+          case '2':
+            e.preventDefault();
+            showPage('iraises');
+            break;
+          case '3':
+            e.preventDefault();
+            showPage('asiapride');
+            break;
+          case '4':
+            e.preventDefault();
+            showPage('tradelink');
+            break;
+          case '5':
+            e.preventDefault();
+            showPage('services');
+            break;
+          case 'Enter':
+            e.preventDefault();
+            showPage('contact');
+            break;
+        }
+      }
+    });
+
+    // Click Tracking
+    document.addEventListener('click', function(e) {
+      CONFIG.userEngagement.interactions++;
+      
+      // Add ripple effect to buttons
+      if (e.target.classList.contains('btn') || e.target.closest('.btn')) {
+        const button = e.target.closest('.btn') || e.target;
+        createRippleEffect(button, e);
+      }
+    });
+
+    function createRippleEffect(element, event) {
+      const ripple = document.createElement('span');
+      const rect = element.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = event.clientX - rect.left - size / 2;
+      const y = event.clientY - rect.top - size / 2;
+      
+      ripple.style.cssText = `
+        position: absolute;
+        width: ${size}px;
+        height: ${size}px;
+        left: ${x}px;
+        top: ${y}px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        transform: scale(0);
+        animation: ripple 0.6s ease-out;
+        pointer-events: none;
+        z-index: 1000;
+      `;
+      
+      element.style.position = 'relative';
+      element.style.overflow = 'hidden';
+      element.appendChild(ripple);
+      
+      setTimeout(() => ripple.remove(), 600);
+    }
+
+    // Error Handling
+    window.addEventListener('error', function(e) {
+      console.error('JavaScript Error:', e.error);
+      showToast('Technical Issue', 'Something went wrong. Please refresh the page or contact support if the issue persists.', null, 'error');
+    });
+  </script>
+</body>
+</html>
